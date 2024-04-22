@@ -11,7 +11,7 @@ function TimeSlot() {
   
     const handleChangeTimeOnSubmit = (value) => {
         changeTime(value);
-    console.log(value);
+    // console.log(value);
         //setting slot in localstorage
         window.localStorage.setItem("slot", value);
       };

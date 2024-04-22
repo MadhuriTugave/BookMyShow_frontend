@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "../styles/SeatsInput.css"
 
 function SeatsInput({
@@ -11,11 +11,12 @@ function SeatsInput({
   }) {
    
     const [inputValue, setInputValue] = useState("");
+    const textRef = useRef(text);
 
   useEffect(() => {
     // Update the input value whenever noOfSeat[text] changes
-    setInputValue(noOfSeat?.[text] || "");
-  }, [noOfSeat?.[text]]);
+    setInputValue(noOfSeat?.[textRef.current] || "");
+  }, [noOfSeat, textRef]);
 
   // this function will  handle the change in seat input and update the state and local storage
   const change_seats = (e) => {
@@ -28,12 +29,12 @@ function SeatsInput({
       "seats",
       JSON.stringify({ ...noOfSeat, [e.target.name]: Number(newValue) })
     );
-    
+  
   };
 
   // help in the selection of seats 
   const handleChecked = (text) => {
-    console.log(changeSeats,text,"...........")
+    // console.log(changeSeats,text,"...........")
     changeSeats(text);
     changeSeats("");
   };

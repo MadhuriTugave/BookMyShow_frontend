@@ -7,7 +7,7 @@ import  BookingContect from '../context/creatcontext';
 function Movie() {
   const context =useContext(BookingContect);
  const { movie , changeMovie }=context;
- console.log( context.movie,"from movie");
+//  console.log( context.movie,"from movie");
 
   function handleChangeMovie(value){
     // console.log(value)

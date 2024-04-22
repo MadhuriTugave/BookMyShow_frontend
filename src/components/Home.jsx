@@ -10,14 +10,14 @@ import BookingContect from '../context/creatcontext'
 
 function Home() {
     const context = useContext(BookingContect);
- console.log(context);
+//  console.log(context);
     const {
       movie,
       time,
       noOfSeat,
       handlePostBooking,
     } = context;
-  
+
     //check whether any seat has a negative value
     const checkNegativeSeatsValidity = (seats) => {
       for (let seat in seats) {
