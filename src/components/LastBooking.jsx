@@ -14,7 +14,7 @@ function LastBooking() {
     try {
       setLoader(true) // Sending a request for getting LastBooking 
       const res = await fetch(
-         `http://localhost:8080/api/booking`
+         `https://backend-booking-hamf.onrender.com/api/booking`
          , {
           method: "GET",
         }

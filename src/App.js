@@ -20,12 +20,12 @@ function App(props) {
   });  // No of seats which the user selects.
 
   // handling post request to save booking details on the backend
-  const handlePostBooking = async () => {
+   async function  handlePostBooking() {
     // Sending request to backend with user selected movie, slot and seats to book movie.
     try {
         
         const res = await fetch(
-          "http://localhost:8080/api/booking",
+          "https://backend-booking-hamf.onrender.com/api/booking",
           {
             method: "POST",
             headers: {

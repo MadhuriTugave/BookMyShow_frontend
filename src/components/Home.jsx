@@ -103,7 +103,7 @@ function Home() {
                 onClick={() => {
                   handleBookNow();
                 }}
-                className="BN-btn ">
+                className="BN-btn " data-testid="Button">
                 Book Now 
               </button>
               </div>
